@@ -11,8 +11,7 @@ routes.post("/signup", async (req, res) => {
 		const result = await newUser.save();
 		res.status(201).send({id: result.id, ...result._doc});
 	} catch (e) {
-		console.log(e?.message);
-		res.status(500).send(e?.message);
+		res.status(500).send(e);
 	}
 });
 
