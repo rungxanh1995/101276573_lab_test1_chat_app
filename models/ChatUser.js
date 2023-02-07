@@ -7,6 +7,7 @@ const ChatUserSchema = new mongoose.Schema({
 	userName: {
 		type: String,
 		required: true,
+		unique: true,
 		trim: true
 	},
 	firstName: {
